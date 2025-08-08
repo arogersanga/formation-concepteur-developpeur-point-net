@@ -1,0 +1,32 @@
+<h2>player-form</h2>
+<form [formGroup]="playerForm">
+    <label for="firstname">Nom
+        <input id="firstname" type="text" formControlName="firstname" />
+    </label>
+    <br><br>
+    <label>Prénom
+        <input id="lastname" type="text" formControlName="lastname" />
+    </label>
+    <br><br>
+    <label>Equipe Id
+        <input type="number" formControlName="teamid" />
+    </label>
+    <br><br>
+    <label>Position
+        <input id="position" type="text" formControlName="position" />
+    </label>
+    <br><br>
+    <label>Age
+        <input type="text" formControlName="age" />
+    </label>
+    <br><br>
+    <button (click)="retourALaListe()">Retouner à la liste</button>
+    <br>
+    <br>
+        <button [disabled]="!playerForm.valid "  (click)="modifierInfos()">Modifier infos</button>
+    <br>
+    <br>
+    <button type="submit" (click)="onSubmit()" [disabled]="!playerForm.valid">Ajouter joueur</button>
+
+
+</form>

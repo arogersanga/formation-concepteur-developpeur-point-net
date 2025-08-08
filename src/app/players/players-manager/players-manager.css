@@ -1,0 +1,12 @@
+th {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #f9f9f9;
+  align-items: center;
+  align-content: center;
+  height: 2rem;
+    width: 10rem;
+ border: 0.5px solid;
+}

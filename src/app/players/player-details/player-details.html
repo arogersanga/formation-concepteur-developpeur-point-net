@@ -1,0 +1,30 @@
+<h2>Player-details</h2>
+
+@if(player) {
+<article>
+    <h3>{{ 'Id : ' + player.id}}</h3>
+
+    <h4>{{ 'First Name : ' + player.firstname}}</h4>
+
+    <h4>{{ 'Last Name : ' + player.lastname}}</h4>
+
+    <h4>{{ 'Team Id : ' + player.teamid}}</h4>
+
+    <h4>{{ 'Position : ' + player.position}}</h4>
+
+    <h4>{{ 'Age : ' + player.age}}</h4>
+
+
+</article>
+
+
+<button (click)="retourALaListe()">Retouner à la liste</button>
+<br>
+<br>
+<button (click)="ajouterNouveau()">Ajouter un joueur</button>
+<br>
+<br>
+
+<button (click)="deletePlayer(player)">Retirer ce joueur</button>
+
+}
