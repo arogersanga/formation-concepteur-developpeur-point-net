@@ -1,0 +1,9 @@
+<form>
+    <select (change)="changePlayer($event)">
+        <option>Selectionnez une Une Position</option>
+        @for (position of positionUniques; track position) {
+
+        <option [value]="position">{{position}}</option>
+        }
+    </select>
+</form>

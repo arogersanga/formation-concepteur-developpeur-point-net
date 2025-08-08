@@ -23,10 +23,10 @@
     <button (click)="retourALaListe()">Retouner à la liste</button>
     <br>
     <br>
-        <button [disabled]="!playerForm.valid "  (click)="modifierInfos()">Modifier infos</button>
+        <button [disabled]="!(playerForm.valid && buttonVisibleUpdate) "  (click)="modifierInfos()">Modifier infos</button>
     <br>
     <br>
-    <button type="submit" (click)="onSubmit()" [disabled]="!playerForm.valid">Ajouter joueur</button>
+    <button type="submit" (click)="onSubmit()" [disabled]="!(playerForm.valid && buttonVisibleSave)">Ajouter joueur</button>
 
 
 </form>

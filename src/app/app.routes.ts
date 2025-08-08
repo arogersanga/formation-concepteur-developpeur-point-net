@@ -4,6 +4,7 @@ import { PlayerForm } from './players/player-form/player-form';
 import { PlayerDetails } from './players/player-details/player-details';
 
 export const routes: Routes = [
+      { path: '', redirectTo: 'players', pathMatch: 'full' },
     { path: 'players', component: PlayersManager },
     { path: 'formulaire', component: PlayerForm },
     { path: 'formulaire/:id', component: PlayerForm },

@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angula
 import { ActivatedRoute, Router } from '@angular/router';
 import { PlayersService } from '../players-service';
 import { Player } from '../models/player';
+import { flush } from '@angular/core/testing';
 
 @Component({
   selector: 'players-player-form',
@@ -13,7 +14,7 @@ import { Player } from '../models/player';
 })
 export class PlayerForm {
 buttonVisibleUpdate: boolean = false;
-  buttonVisibleSave: boolean = false;
+  buttonVisibleSave: boolean = true;
   player: Player = { id: '', firstname: '', lastname: '', teamid: 0, position: '', age: 0 };
    playerToUpdate: Player = { id: '', firstname: '', lastname: '', teamid: 0, position: '', age: 0 };
   idPlayer: string = '';
@@ -37,8 +38,8 @@ buttonVisibleUpdate: boolean = false;
         this.playerForm.controls['teamid'].setValue(player.teamid);
         this.playerForm.controls['position'].setValue(player.position);
         this.playerForm.controls['age'].setValue(player.age);
-this.buttonVisibleSave=false;
         this.buttonVisibleUpdate = true;
+        this.buttonVisibleSave = false;
         this.playerToUpdate = player;
       })
     });
